@@ -118,6 +118,23 @@ h2.title {
   color: var(--accent-color);
 }
 
+.nav-list .list {
+  position: relative;
+}
+
+.nav-link.link.current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  
+  display: block;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
 .head {
   border-bottom: 1px #ececec solid;
 }
@@ -159,8 +176,6 @@ h2.title {
   fill: currentColor;
   margin-right: 10px;
 }
-
-
 
 /* Hero */
 
@@ -291,6 +306,7 @@ h2.title {
 .about.section {
   padding-top: 0;
 }
+
 .about-title {
   margin-bottom: 50px;
   text-align: center;
@@ -303,20 +319,24 @@ h2.title {
 }
 
 .about-group {
+  display: flex;
   position: relative;
   flex-basis: calc((100% - 60px)/3);
 }
 
-.about-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 70px;
-  width: 100%;
-  
-  padding-top: 27px;
-  padding-bottom: 27px;
+.label-wrapper {
+   position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(47, 48, 58, 0.8);
+}
 
+.about-label {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -324,8 +344,8 @@ h2.title {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--whity-color);
-  background-color: rgba(47, 48, 58, 0.8);;
 }
+
 
 /* Team */
 
