@@ -8,6 +8,8 @@
   --background-dark: #2f303a;
   --black: #000000;
   --icon-color: #AFB1B8;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 250ms;
 }
 
 /* general */
@@ -107,6 +109,10 @@ h2.title {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .head-nav .link:hover,
@@ -231,6 +237,10 @@ h2.title {
   height: 50px;
   border-radius: 4px;
   border: none;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .button:active, 
@@ -409,7 +419,10 @@ h2.title {
   
   border-radius: 55px;
   background-color: var(--whity-color);
-  
+
+  transition-property: color, background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--transition-timing-function);
 }
     
 .social:hover {
@@ -446,6 +459,10 @@ h2.title {
   
   border: 1px solid var(--icon-color);
   border-radius: 4px; 
+
+  transition-property: color, border;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--transition-timing-function);
   
 }
 
@@ -470,8 +487,6 @@ h2.title {
   background-color: var(--background-dark);
 }
 
-
-
 .address li {
   list-style: none;
 }
@@ -480,10 +495,6 @@ h2.title {
   color: var(--whity-color);
 }
 
-.footer .link:hover,
-.footer .link:focus {
-  color: var(--accent-color);
-}
 
 .footer .logo.logo-footer {
   display: block;
@@ -498,6 +509,15 @@ h2.title {
   font-style: normal;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.footer .link:hover,
+.footer .link:focus {
+  color: var(--accent-color);
 }
 
 .footer .address {
@@ -540,6 +560,12 @@ h2.title {
 .footer-icons-group .social {
   fill: var(--whity-color);
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--transition-timing-function);
+
+
 }
 
 .footer-icons-group .social:hover {
@@ -576,6 +602,10 @@ h2.title {
   letter-spacing: 0.03em;
   color: var(--titly-text-color);
   background-color: var(--background-color);
+
+  transition-property: color, box-shadow, background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--transition-timing-function);
 }
 
 .portfolio .radio-button:active,
@@ -600,6 +630,12 @@ h2.title {
   
 }
 
+.work-link.link {
+transition-property: box-shadow;
+transition-duration: var(--duration);
+transition-timing-function: var(--transition-timing-function);
+}
+
 .work-link.link:hover {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -614,6 +650,8 @@ h2.title {
 
 .work-link {
   text-decoration: none;
+
+
 }
 
 .portfolio-list .work-title {
