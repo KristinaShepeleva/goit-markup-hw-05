@@ -493,7 +493,6 @@ h2.title {
   color: var(--whity-color);
 }
 
-
 .footer .logo.logo-footer {
   display: block;
   margin-bottom: 20px;
@@ -556,7 +555,8 @@ h2.title {
 }
 
 .footer-icons-group .social {
-  fill: var(--whity-color);
+  color: var(--whity-color);
+  fill: currentColor;
   background-color: rgba(255, 255, 255, 0.1);
 
   transition-property: background-color;
